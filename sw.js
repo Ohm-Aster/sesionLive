@@ -18,6 +18,7 @@ self.addEventListener('install', e => {
   )
 })
 
+
 //una vez que se instala el SW, se activa y busca los recursos para hacer que funcione sin conexión
 self.addEventListener('activate', e => {
   const cacheWhitelist = [CACHE_NAME]
@@ -38,6 +39,7 @@ self.addEventListener('activate', e => {
       .then(() => self.clients.claim())
   )
 })
+
 
 //cuando el navegador recupera una url
 self.addEventListener('fetch', e => {
